@@ -17,7 +17,8 @@
    transformed component out of itself.
    `url(${imageUrl})`
 
-To render img for local directory dynamically.
+!!!!!!!!!!!! To render img for local directory dynamically !!!!!!!!!!!!!!!!!!!!!
+
 Example:
 
 1. locate images folder to ../../images....
@@ -54,17 +55,18 @@ Example:
    }
    ];
 
-3. const CollectionItem = ({ id, name, price, imageUrl }) => (
-     <div className='collection-item'>
-       <div className='image'>
-         <img
-           src={require(`../../images/shop-img/hats/${name}.png`)}
-           alt='ss'
-         ></img>
-       </div>
-       <div className='collection-footer'>
-         <span className='name'>{name}</span>
-         <span className='price'>{price}</span>
-       </div>
-     </div>
-   );
+3. The key is to have a reference ex. name. But we need our image.png has the same name.
+
+const CollectionItem = ({ id, name, price, imageUrl }) => (
+<div className='collection-item'>
+<div className='image'>
+<img
+src={require(`../../images/shop-img/hats/${name}.png`)}
+alt='ss' ></img>
+</div>
+<div className='collection-footer'>
+<span className='name'>{name}</span>
+<span className='price'>{price}</span>
+</div>
+</div>
+);
