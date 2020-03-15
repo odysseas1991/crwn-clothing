@@ -58,6 +58,7 @@ Example:
 3. The key is to have a reference ex. name. But we need our image.png has the same name.
 
 const CollectionItem = ({ id, name, price, imageUrl }) => (
+
 <div className='collection-item'>
 <div className='image'>
 <img
@@ -70,3 +71,8 @@ alt='ss' ></img>
 </div>
 </div>
 );
+
+4. FIREBASE
+
+   4.1 npm add firebase
+   4.2 Google Sign In authentication :https://firebase.google.com/docs/auth/web/google-signin
