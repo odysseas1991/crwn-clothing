@@ -37,6 +37,7 @@ class SignUp extends React.Component {
 
       await createUserProfileDocument(user, { displayName });
 
+      //if createUserProfileDocument is succeeded then clear the state
       this.setState({
         displayName: '',
         email: '',
