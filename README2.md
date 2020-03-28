@@ -17,7 +17,13 @@
    transformed component out of itself.
    `url(${imageUrl})`
 
-!!!!!!!!!!!! To render img for local directory dynamically !!!!!!!!!!!!!!!!!!!!!
+4. Redux
+
+   npm add redux redux-logger react-redux
+
+--------------------------------------------------------------------------------
+
+<--------! To render img for local directory dynamically !--------------------->
 
 Example:
 
