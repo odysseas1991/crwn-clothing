@@ -21,7 +21,12 @@
 
    npm add redux redux-logger react-redux
 
---------------------------------------------------------------------------------
+5. npm add redux-persist
+
+   Redux persist is a library allowing to save the redux store in the local storage of your browser.
+   It lets us leverage either locale storage or session storage.
+
+---
 
 <--------! To render img for local directory dynamically !--------------------->
 
