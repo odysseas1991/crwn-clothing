@@ -29,6 +29,13 @@
 6. npm add react-stripe-checkout
    It provides us the checkout button.
 
+7. Heroku
+
+   To build again the new version of the application:
+
+   git add -A
+   git push heroku master
+
 <--------! To render img for local directory dynamically !--------------------->
 
 Example:
