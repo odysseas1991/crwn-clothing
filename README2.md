@@ -26,7 +26,8 @@
    Redux persist is a library allowing to save the redux store in the local storage of your browser.
    It lets us leverage either locale storage or session storage.
 
----
+6. npm add react-stripe-checkout
+   It provides us the checkout button.
 
 <--------! To render img for local directory dynamically !--------------------->
 
