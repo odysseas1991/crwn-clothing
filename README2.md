@@ -36,6 +36,10 @@
    git add -A
    git push heroku master
 
+8. npm add redux-thunk
+
+   Handle asynchronous redux. It is a piece of middleware that allows us to fire functions.
+
 <--------! To render img for local directory dynamically !--------------------->
 
 Example:

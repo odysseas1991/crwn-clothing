@@ -14,6 +14,8 @@ const config = {
   measurementId: 'G-PX8JSX9J31',
 };
 
+firebase.initializeApp(config);
+
 export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!userAuth) return;
 
@@ -24,7 +26,6 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
   if (!snapShot.exists) {
     const { displayName, email } = userAuth;
     const createdAt = new Date();
-
     try {
       await userRef.set({
         displayName,
@@ -36,7 +37,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
       console.log('error creating user', error.message);
     }
   }
-  //console.log(snapShot);
+
   return userRef;
 };
 
@@ -70,23 +71,14 @@ export const convertCollectionsSnapshotToMap = (collections) => {
   return transformedCollection.reduce((accumulator, collection) => {
     accumulator[collection.title.toLowerCase()] = collection;
     return accumulator;
-  });
+  }, {});
 };
-
-firebase.initializeApp(config);
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
 
-//Create an instance of the Google provider object
 const provider = new firebase.auth.GoogleAuthProvider();
-
-//Specify additional custom OAuth provider parameters that you want to send with the OAuth request.
 provider.setCustomParameters({ prompt: 'select_account' });
-
-//Authenticate with Firebase using the Google provider object. You can prompt your users to sign in with
-//their Google Accounts either by opening a pop-up window or by redirecting to the sign-in page.
-//To sign in with a pop-up window, call signInWithPopup.
 export const signInWithGoogle = () => auth.signInWithPopup(provider);
 
 export default firebase;
