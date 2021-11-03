@@ -1,4 +1,6 @@
-Live at: https://crwn-clothing-by-oddy-live.herokuapp.com/
+## Live at: https://crwn-clothing-by-oddy-live.herokuapp.com/
+
+----------------------------------------------------------------
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
